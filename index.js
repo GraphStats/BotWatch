@@ -20,13 +20,13 @@ const client = new Client({
         GatewayIntentBits.GuildMessages,
         GatewayIntentBits.MessageContent
     ],
-    // Ajoutez ces options pour gérer les timeouts
+    
     rest: {
-        timeout: 30000, // Timeout de 30 secondes pour les requêtes REST
+        timeout: 30000,
     },
     ws: {
         properties: {
-            $browser: "Discord iOS" // Peut aider avec certains timeouts
+            $browser: "Discord iOS"
         }
     }
 });
@@ -35,7 +35,7 @@ const client = new Client({
 const DATA_DIR = path.join(__dirname, 'data');
 const DATA_FILE = path.join(DATA_DIR, 'uptimeData.json');
 const TRACK_FILE = path.join(DATA_DIR, 'trackMessages.json');
-const MAX_TRACK = 30 * 24 * 60 * 60 * 1000; // 30 jours en ms
+const MAX_TRACK = 30 * 24 * 60 * 60 * 1000; 
 
 console.log('----------- Bot starting up -----------');
 console.log('Checking data directories and files...');
